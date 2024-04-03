@@ -8,17 +8,18 @@ import lombok.Setter;
 @Setter
 public class Circle {
 
-    private Point circleCentre;
+    private Point centre;
     private double radius;
 
     public Circle (Point centre, double radius) {
-        this.circleCentre = centre;
+        this.centre = centre;
         this.radius = radius;
     }
 
     public boolean isInside(Point point) {
-        double distanceX = point.getX() - circleCentre.getX();
-        double distanceY = point.getY() - circleCentre.getY();
+        // Instead of an "oneliner" I used a more readable approach
+        double distanceX = point.getX() - centre.getX();
+        double distanceY = point.getY() - centre.getY();
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY) <= radius;
     }
 }
