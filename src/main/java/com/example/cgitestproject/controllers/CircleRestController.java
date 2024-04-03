@@ -21,5 +21,4 @@ public class CircleRestController {
         responseDTO.setInsideCircle(circle.isInside(point));
         return responseDTO;
     }
-
 }
