@@ -1,5 +1,11 @@
 package models;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Circle {
 
     private Point circleCentre;
@@ -11,6 +17,9 @@ public class Circle {
     }
 
     public boolean isInside(Point point) {
-        
+        double distanceX = point.getX() - circleCentre.getX();
+        double distanceY = point.getY() - circleCentre.getY();
+        return Math.sqrt(distanceX * distanceX + distanceY * distanceY) <= radius;
     }
+
 }
