@@ -5,10 +5,18 @@ Made with:
 
 Spring Boot V3.2.4, Java 17, Maven 3.9.6
 
-Guide:
+Guide using IDE:
 
-JAR file with runnable programme located at: \CGI-test-project\jarApp\target
+After running main application use Swagger UI address to test Circle isInside method API: http://localhost:8080/swagger-ui/index.html#
 
-cmd command to run the app (must be in target directory): java -jar CGI-test-project-0.0.1-SNAPSHOT.jar
+Guide to create runnable JAR file:
 
-Swagger UI address to test Circle isInside method API: http://localhost:8080/swagger-ui/index.html#
+in terminal type: mvn clean package
+
+JAR package will be created at \CGI-test-project\target
+
+open CMD - CD to target folder
+
+once there, type: java -jar CGI-test-project-0.0.1-SNAPSHOT.jar
+
+use Swagger UI address to test Circle isInside method API: http://localhost:8080/swagger-ui/index.html#
