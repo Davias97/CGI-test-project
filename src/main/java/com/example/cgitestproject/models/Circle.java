@@ -1,4 +1,4 @@
-package models;
+package com.example.cgitestproject.models;
 
 
 import lombok.Getter;
@@ -21,5 +21,4 @@ public class Circle {
         double distanceY = point.getY() - circleCentre.getY();
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY) <= radius;
     }
-
 }
