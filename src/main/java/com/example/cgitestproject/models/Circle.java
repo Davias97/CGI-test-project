@@ -16,8 +16,21 @@ public class Circle {
         this.radius = radius;
     }
 
-    public boolean isInside(Point point) {
-        // Instead of an "oneliner" I used a more readable approach
+    public boolean isInside(Point point){
+
+        if (point == null) {
+            throw new IllegalArgumentException("Point cannot be null");
+        }
+
+        if (centre == null) {
+            throw new IllegalStateException("Centre point has not been initialized");
+        }
+
+        if (Double.isNaN(centre.getX()) || Double.isNaN(centre.getY())) {
+            throw new IllegalStateException("Centre coordinates cannot be NaN");
+        }
+
+        // Instead of an "oneliner" I used a more readable approach.
         double distanceX = point.getX() - centre.getX();
         double distanceY = point.getY() - centre.getY();
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY) <= radius;
